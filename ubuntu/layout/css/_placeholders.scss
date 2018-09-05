@@ -1,0 +1,63 @@
+/*
+ * Placeholders Selectors File in Scss.
+ * Containing ( Placholders And Attributes )
+ */
+@import "_variables";
+
+%uppercase { text-transform: uppercase; }
+%light     { font-weight: 100; }
+%bold      { font-weight: bold; }
+%default-lineheight { line-height: 1.5em; }
+%absolute-position { position: absolute; }
+
+%section-defaults {
+	width: 1000px;
+	text-align: center;
+	margin: $margin + 15 auto;
+}
+
+%section-heading {
+	font-weight: bold;
+	text-align: center !important;
+	font-family: $pt-sans;
+}
+
+
+%control-app {
+  background-color: #111;
+  padding: 10px 25px;
+  color: #FFF;
+  position: relative;
+  z-index: 99999;
+  i {
+    cursor: pointer;
+    font-size: 16px;
+    padding-right: 3px;
+  }
+}
+%default-app-settings {
+  z-index: 9999999999999999999999999999999999999999999999999999999999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  width: 901px;
+  height: 375px;
+  resize: both;
+  border-radius: 5px;
+  box-shadow: -3px 5px 20px 5px rgba(0, 0, 0, 0.58);
+  .content {
+    position: relative;
+    textarea {
+      position: absolute;
+      width: 100%;
+      height: 375px;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      color: #ddd;
+    }
+  }
+  .control { @extend %control-app ; }
+}
